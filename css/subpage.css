@@ -45,6 +45,7 @@
     width: 100%;
     text-align: center;
     color: var(--nierGray);
+    z-index: -1;
 }
 
 .footer p {
@@ -61,6 +62,8 @@
     margin-right: 32px;
     padding: 0px 8px 0px 8px;
     background-color: var(--nierCream);
+    border: 2px solid var(--nierBrown);
+    border-radius: 8px;
 }
 
 .section-contents a {
@@ -74,7 +77,7 @@
 
 .back-button a {
     color: var(--nierBrown);
-    font-size: 12pt;
+    font-size: 2.5vb;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     padding: 0px 8px 0px 8px;
@@ -147,13 +150,15 @@ h1 {
 }
 
 html {
-    background-image: url("https://ringoorigo.github.io/res/img/bg_light_tile.png");
+    background-image: url("https://ringoorigo.github.io/res/img/bg_light_tile.webp");
 
     font-family: "Rodin Pro DB", sans-serif;
     font-size: 16px;
     color: var(--nierGray);
 
     overflow-x: hidden;
+    background-attachment: fixed;
+    padding-bottom: 64px;
 }
 
 /* Overrides for portrait mode. Basically the changes necessary to look decent on mobile */
@@ -161,16 +166,13 @@ html {
     img {
         display: none;
     }
-    .footer {
-        z-index: -1;
-    }
     html {
         padding-bottom: 64px;
     }
     .back-button {
         margin-bottom: 44px;
         height: fit-content;
-        border: 2px solid transparent;
+        border: 2px solid var(--nierBrown);
         border-radius: 8px;
     }
     .back-button a {
